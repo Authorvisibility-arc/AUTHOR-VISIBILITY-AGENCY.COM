@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Author Visibility Agency - Premier author marketing, branding, and book promotion solutions led by Carine Levi.">
+    <meta name="keywords" content="author marketing, book promotion, author branding, reader engagement, publishing">
+    <meta name="author" content="Author Visibility Agency">
+    <title>Author Visibility Agency | Led by Carine Levi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+/* =====================================================
+   RESET & ROOT VARIABLES
+===================================================== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --red:#e94560;
+  --gold:#d4af37;
+  --gold2:#f5d060;
+  --purple:#764ba2;
+  --blue:#667eea;
+  --cyan:#2dd4bf;
+  --green:#2ed573;
+  --white:#ffffff;
+  --dark:#000000;
+
+  --ga:linear-gradient(135deg,#e94560 0%,#f5a623 100%);
+  --gg:linear-gradient(135deg,#d4af37 0%,#f5d060 100%);
+  --gp:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+
+  /* Glass colours — translucent so wallpaper shows */
+  --gl:rgba(255,255,255,.06);
+  --gl-b:rgba(255,255,255,.13);
+  --gd:rgba(0,0,0,.30);
+  --gd-b:rgba(255,255,255,.09);
+
+  /* Text */
+  --t0:rgba(255,255,255,1.00);
+  --t1:rgba(255,255,255,.88);
+  --t2:rgba(255,255,255,.65);
+  --t3:rgba(255,255,255,.42);
+
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-xl:32px;--r-f:60px;
+  --ease:all .4s cubic-bezier(.25,.46,.45,.94);
+  --easef:all .22s ease;
+  --sh:0 8px 32px rgba(0,0,0,.40);
+  --shg:0 0 40px rgba(233,69,96,.20);
+}
+
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--t0);
+  overflow-x:hidden;
+  background:#000;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+ul{list-style:none}
+
+/* =====================================================
+   LAYOUT UTILITIES
+===================================================== */
+.w{max-width:1260px;margin:0 auto;padding:0 26px}
+.sp{padding:120px 0}
+
+/* =====================================================
+   WALLPAPER BACKGROUNDS — YOUR FILES ONLY
+   No overlay, no colour layer, wallpaper fully visible
+===================================================== */
+.bg1{
+  background-image:url('background1.jpg');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  position:relative;
+}
+.bg2{
+  background-image:url('background2.jpg');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  position:relative;
+}
+.bg3{
+  background-image:url('background3.jpg');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  position:relative;
+}
+
+/* =====================================================
+   GLASS CARDS — transparent, floating on wallpaper
+===================================================== */
+.gl{
+  background:var(--gl);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--gl-b);
+  border-radius:var(--r-lg);
+  transition:var(--ease);
+}
+.gl:hover{
+  background:rgba(255,255,255,.11);
+  border-color:rgba(255,255,255,.22);
+  box-shadow:var(--sh);
+}
+.gd{
+  background:var(--gd);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--gd-b);
+  border-radius:var(--r-lg);
+  transition:var(--ease);
+}
+.gd:hover{
+  background:rgba(0,0,0,.42);
+  border-color:rgba(255,255,255,.16);
+  box-shadow:var(--sh);
+}
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+.sh{text-align:center;margin-bottom:72px}
+.sh .ov{
+  display:inline-block;font-size:.76rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:4px;
+  color:var(--gold);margin-bottom:14px;
+  text-shadow:0 0 20px rgba(212,175,55,.5);
+}
+.sh h2{
+  font-size:clamp(2rem,4.5vw,3.4rem);
+  font-weight:800;color:var(--t0);
+  margin-bottom:18px;
+  text-shadow:0 3px 25px rgba(0,0,0,.55);
+}
+.sh .bar{
+  width:76px;height:4px;background:var(--ga);
+  margin:18px auto;border-radius:2px;
+  box-shadow:0 0 18px rgba(233,69,96,.45);
+}
+.sh .ds{
+  font-size:1.08rem;color:var(--t2);
+  max-width:620px;margin:0 auto;line-height:1.82;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:10px;padding:15px 36px;border-radius:var(--r-f);
+  font-weight:600;font-size:.93rem;
+  font-family:'Inter',sans-serif;
+  cursor:pointer;transition:var(--ease);
+  border:none;outline:none;
+  white-space:nowrap;position:relative;overflow:hidden;
+}
+.btn::after{
+  content:'';position:absolute;top:50%;left:50%;
+  width:0;height:0;border-radius:50%;
+  background:rgba(255,255,255,.18);
+  transition:width .55s,height .55s;
+  transform:translate(-50%,-50%);
+}
+.btn:active::after{width:280px;height:280px}
+
+.br{background:var(--ga);color:#fff;box-shadow:0 4px 22px rgba(233,69,96,.40)}
+.br:hover{transform:translateY(-3px);box-shadow:0 8px 36px rgba(233,69,96,.52)}
+
+.bg{background:var(--gg);color:#0a0a1a;box-shadow:0 4px 22px rgba(212,175,55,.36)}
+.bg:hover{transform:translateY(-3px);box-shadow:0 8px 36px rgba(212,175,55,.48)}
+
+.bgl{
+  background:rgba(255,255,255,.08);color:#fff;
+  border:1.5px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+}
+.bgl:hover{background:rgba(255,255,255,.18);transform:translateY(-3px);box-shadow:var(--sh)}
+
+/* =====================================================
+   PRELOADER
+===================================================== */
+.pre{
+  position:fixed;inset:0;background:#000;
+  display:flex;align-items:center;justify-content:center;
+  z-index:99999;transition:opacity .8s,visibility .8s;
+}
+.pre.off{opacity:0;visibility:hidden;pointer-events:none}
+.pre-logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.85rem;font-weight:800;
+  color:#fff;margin-bottom:28px;
+  letter-spacing:3px;text-align:center;
+}
+.pre-logo span{color:var(--gold)}
+.pbar{width:200px;height:3px;background:rgba(255,255,255,.08);border-radius:10px;overflow:hidden;margin:0 auto}
+.pfil{width:0;height:100%;background:var(--ga);border-radius:10px;animation:pfl 2s ease forwards}
+@keyframes pfl{0%{width:0}55%{width:68%}100%{width:100%}}
+
+/* =====================================================
+   CUSTOM CURSOR
+===================================================== */
+.cdot,.crng{display:none;position:fixed;pointer-events:none;border-radius:50%;z-index:99998;transform:translate(-50%,-50%)}
+.cdot{width:8px;height:8px;background:var(--red);transition:transform .08s}
+.crng{width:40px;height:40px;border:2px solid rgba(233,69,96,.30);transition:width .15s,height .15s,border-color .15s,background .15s}
+.crng.hv{width:58px;height:58px;border-color:var(--red);background:rgba(233,69,96,.07)}
+@media(min-width:1025px){.cdot,.crng{display:block}}
+
+/* =====================================================
+   NAVBAR — fully transparent
+===================================================== */
+.nav{
+  position:fixed;top:0;width:100%;z-index:1000;
+  padding:17px 0;transition:var(--ease);
+}
+.nav.stk{
+  background:rgba(0,0,0,.48);
+  backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+  padding:9px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  box-shadow:0 4px 30px rgba(0,0,0,.30);
+}
+.nav .w{display:flex;justify-content:space-between;align-items:center}
+
+.logo{display:flex;align-items:center;gap:12px;z-index:1001}
+.lic{
+  width:46px;height:46px;background:var(--ga);border-radius:13px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.15rem;color:#fff;box-shadow:0 4px 18px rgba(233,69,96,.35);
+}
+.ltx{
+  font-family:'Playfair Display',serif;
+  font-size:1.06rem;font-weight:800;color:#fff;
+  letter-spacing:1.5px;line-height:1.1;
+  text-shadow:0 2px 10px rgba(0,0,0,.5);
+}
+.ltx small{
+  display:block;font-family:'Inter',sans-serif;
+  font-size:.56rem;font-weight:600;letter-spacing:3px;
+  text-transform:uppercase;color:var(--gold);margin-top:2px;
+}
+
+.nl2{display:flex;gap:25px;align-items:center}
+.nl2 a{
+  color:rgba(255,255,255,.82);font-weight:500;
+  font-size:.87rem;transition:var(--easef);
+  position:relative;padding:4px 0;
+}
+.nl2 a::after{
+  content:'';position:absolute;bottom:-2px;left:0;
+  width:0;height:2px;background:var(--ga);transition:width .3s;
+}
+.nl2 a:hover{color:#fff}
+.nl2 a:hover::after{width:100%}
+.ncta{
+  padding:9px 24px!important;background:var(--ga)!important;
+  border-radius:var(--r-f)!important;color:#fff!important;
+  font-weight:600!important;box-shadow:0 3px 15px rgba(233,69,96,.35);
+  text-shadow:none!important;
+}
+.ncta::after{display:none!important}
+.ncta:hover{transform:translateY(-2px);box-shadow:0 6px 26px rgba(233,69,96,.50)!important}
+
+/* Hamburger */
+.ham{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1001;padding:5px}
+.ham span{width:27px;height:2.5px;background:#fff;border-radius:3px;transition:var(--ease);transform-origin:center}
+.ham.on span:nth-child(1){transform:rotate(45deg) translate(5.5px,5.5px)}
+.ham.on span:nth-child(2){opacity:0}
+.ham.on span:nth-child(3){transform:rotate(-45deg) translate(5.5px,-5.5px)}
+
+.mov{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);z-index:998;opacity:0;visibility:hidden;transition:var(--ease)}
+.mov.on{opacity:1;visibility:visible}
+.mmenu{
+  position:fixed;top:0;right:-100%;width:min(85%,370px);height:100vh;
+  background:rgba(0,0,0,.90);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);
+  z-index:999;padding:95px 38px 40px;
+  transition:right .5s cubic-bezier(.77,0,.175,1);overflow-y:auto;
+  border-left:1px solid rgba(255,255,255,.07);
+}
+.mmenu.on{right:0}
+.mmenu a{
+  display:block;color:rgba(255,255,255,.78);
+  padding:17px 0;font-size:1.08rem;font-weight:500;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  transition:var(--easef);
+}
+.mmenu a:hover{color:var(--red);padding-left:10px}
+.mcta{
+  display:block;margin-top:28px;padding:13px 30px;
+  background:var(--ga);border-radius:var(--r-f);
+  color:#fff!important;font-weight:600;text-align:center;
+}
+
+/* =====================================================
+   PAGE 1 — HERO  |  background1.jpg
+===================================================== */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  overflow:hidden;
+}
+/* Subtle vignette only at very edges so wallpaper is fully visible */
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.38) 100%);
+  z-index:1;pointer-events:none;
+}
+.hero .w{
+  position:relative;z-index:3;
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:56px;align-items:center;padding-top:80px;
+}
+.hct{color:#fff}
+
+.bdg{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(233,69,96,.14);color:#ff7088;
+  padding:9px 20px;border-radius:var(--r-f);
+  font-size:.80rem;font-weight:600;margin-bottom:26px;
+  border:1px solid rgba(233,69,96,.22);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+.pdot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:pd 2s infinite}
+@keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.6)}}
+
+.hct h1{
+  font-size:clamp(2.4rem,5.2vw,4.2rem);
+  font-weight:900;line-height:1.1;margin-bottom:22px;
+  text-shadow:0 4px 28px rgba(0,0,0,.55);
+}
+.hct h1 .hl{
+  background:var(--ga);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 2px 12px rgba(233,69,96,.32));
+}
+.hct .sub{
+  font-size:1.1rem;line-height:1.88;color:var(--t1);
+  margin-bottom:38px;max-width:510px;
+  text-shadow:0 2px 14px rgba(0,0,0,.50);
+}
+.hbtns{display:flex;gap:15px;flex-wrap:wrap;margin-bottom:48px}
+
+.hsts{
+  display:inline-flex;gap:38px;
+  padding:22px 30px;
+  background:rgba(0,0,0,.28);
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-lg);
+}
+.hs{text-align:left}
+.hsn{
+  font-size:2.1rem;font-weight:800;
+  font-family:'Playfair Display',serif;
+  background:var(--gg);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 2px 8px rgba(212,175,55,.30));
+}
+.hsl{font-size:.80rem;color:var(--t3);margin-top:4px;font-weight:500}
+
+/* Hero Visual */
+.hvis{position:relative;display:flex;justify-content:center;align-items:center;min-height:480px}
+.bk{position:relative;width:210px;height:305px;perspective:1000px}
+.bkc{
+  width:100%;height:100%;background:var(--gp);
+  border-radius:3px 15px 15px 3px;
+  box-shadow:-10px 12px 50px rgba(0,0,0,.50),0 0 70px rgba(102,126,234,.20);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:#fff;padding:28px;
+  animation:bfl 6s ease-in-out infinite;
+  border-left:6px solid rgba(0,0,0,.28);
+}
+@keyframes bfl{0%,100%{transform:translateY(0) rotateY(-5deg)}50%{transform:translateY(-14px) rotateY(5deg)}}
+.bkc i{font-size:2.8rem;margin-bottom:18px;opacity:.9}
+.bkt{font-family:'Playfair Display',serif;font-size:1rem;text-align:center;font-weight:700}
+.bka{font-size:.70rem;margin-top:9px;opacity:.65;letter-spacing:2px;text-transform:uppercase}
+
+.fc{
+  position:absolute;
+  background:rgba(0,0,0,.30);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:var(--r-md);
+  padding:15px 19px;color:#fff;box-shadow:var(--sh);
+}
+.fci{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;font-size:.90rem;color:#fff}
+.fc h4{font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700}
+.fc p{font-size:.70rem;color:var(--t3);margin-top:2px}
+.fc1{top:28px;right:-8px;animation:fa1 7s ease-in-out infinite}.fc1 .fci{background:var(--ga)}
+.fc2{bottom:55px;left:-28px;animation:fa2 8s ease-in-out infinite}.fc2 .fci{background:var(--gg)}
+.fc3{top:52%;right:-48px;animation:fa3 9s ease-in-out infinite}.fc3 .fci{background:var(--gp)}
+@keyframes fa1{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes fa2{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes fa3{0%,100%{transform:translateY(0)}50%{transform:translateY(-24px)}}
+
+/* Scroll hint */
+.sci{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:4;text-align:center}
+.smou{width:23px;height:36px;border:2px solid rgba(255,255,255,.25);border-radius:12px;margin:0 auto 7px;position:relative}
+.swh{width:4px;height:6px;background:var(--red);border-radius:2px;position:absolute;top:7px;left:50%;transform:translateX(-50%);animation:swha 2s infinite}
+@keyframes swha{0%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(13px)}}
+.sci span{font-size:.62rem;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:3px}
+
+/* =====================================================
+   MARQUEE
+===================================================== */
+.mqstrip{
+  padding:26px 0;
+  background:rgba(0,0,0,.32);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.mqin{display:flex;align-items:center;gap:32px}
+.mqlb{color:var(--t3);font-size:.70rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;white-space:nowrap}
+.mqwr{overflow:hidden;flex:1;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mqtr{display:flex;gap:52px;animation:mq 34s linear infinite;width:max-content}
+.mqtr span{color:var(--t2);font-size:.90rem;font-weight:600;white-space:nowrap;font-family:'Playfair Display',serif}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* =====================================================
+   PAGE 2 — SERVICES  |  background2.jpg
+===================================================== */
+.svcg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{
+  padding:38px 26px;cursor:pointer;
+  position:relative;overflow:hidden;transition:var(--ease);
+}
+.svc:hover{transform:translateY(-11px);box-shadow:0 22px 55px rgba(0,0,0,.45)}
+.sico{
+  width:66px;height:66px;border-radius:17px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:22px;transition:var(--ease);
+}
+.svc:hover .sico{transform:scale(1.1)}
+.cr{background:rgba(233,69,96,.14);color:#ff7088}
+.cg{background:rgba(212,175,55,.14);color:var(--gold2)}
+.cp{background:rgba(118,75,162,.14);color:#c084fc}
+.cb{background:rgba(102,126,234,.14);color:#a5b4fc}
+.cgr{background:rgba(46,213,115,.14);color:#6ee7b7}
+.co{background:rgba(255,165,0,.14);color:#fdba74}
+.crs{background:rgba(244,114,182,.14);color:#f9a8d4}
+.ct{background:rgba(20,184,166,.14);color:#5eead4}
+.csk{background:rgba(56,189,248,.14);color:#7dd3fc}
+.ci{background:rgba(99,102,241,.14);color:#c7d2fe}
+.cy{background:rgba(250,204,21,.14);color:#fde68a}
+.cl{background:rgba(163,230,53,.14);color:#bef264}
+
+.svc h3{font-size:1.18rem;font-weight:700;margin-bottom:11px;color:var(--t0);text-shadow:0 2px 10px rgba(0,0,0,.40)}
+.svc>p{color:var(--t2);line-height:1.74;font-size:.88rem}
+.slk{display:inline-flex;align-items:center;gap:7px;color:var(--red);font-weight:600;font-size:.84rem;margin-top:16px;transition:var(--ease)}
+.slk i{transition:transform .3s}
+.svc:hover .slk i{transform:translateX(5px)}
+
+/* =====================================================
+   PAGE 3 — HOW IT WORKS  |  background3.jpg
+===================================================== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative}
+.steps::before{
+  content:'';position:absolute;top:48px;left:12%;width:76%;height:3px;
+  background:linear-gradient(90deg,var(--red),var(--gold),var(--purple),var(--blue));
+  border-radius:2px;box-shadow:0 0 18px rgba(233,69,96,.30);
+}
+.step{text-align:center;position:relative;z-index:1}
+.stn{
+  width:86px;height:86px;border-radius:50%;background:var(--ga);
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:1.85rem;font-weight:800;margin:0 auto 23px;
+  font-family:'Playfair Display',serif;
+  box-shadow:0 8px 30px rgba(233,69,96,.32);
+  position:relative;transition:var(--ease);
+}
+.stn::after{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:2px dashed rgba(255,255,255,.22);
+  animation:rot 16s linear infinite;
+}
+@keyframes rot{100%{transform:rotate(360deg)}}
+.step:hover .stn{transform:scale(1.1);box-shadow:0 12px 42px rgba(233,69,96,.46)}
+.step h3{font-size:1.12rem;font-weight:700;margin-bottom:10px;color:var(--t0);text-shadow:0 2px 10px rgba(0,0,0,.40)}
+.step>p{color:var(--t2);font-size:.86rem;line-height:1.70;max-width:210px;margin:0 auto}
+
+/* =====================================================
+   PAGE 4 — TEAM  |  background2.jpg
+===================================================== */
+/* Leader spotlight */
+.leader{
+  display:grid;grid-template-columns:auto 1fr;gap:55px;
+  align-items:center;margin-bottom:65px;
+  padding:46px;position:relative;overflow:hidden;
+}
+.lbdg{
+  position:absolute;top:18px;right:22px;background:var(--gg);
+  color:#0a0a1a;padding:5px 16px;border-radius:var(--r-f);
+  font-size:.68rem;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;display:flex;align-items:center;gap:5px;
+  box-shadow:0 4px 14px rgba(212,175,55,.32);
+}
+.lph{
+  width:195px;height:195px;border-radius:50%;overflow:hidden;
+  border:4px solid rgba(233,69,96,.34);
+  box-shadow:0 0 55px rgba(233,69,96,.20);
+  flex-shrink:0;position:relative;z-index:1;
+}
+.lph img{width:100%;height:100%;object-fit:cover}
+.linf{position:relative;z-index:1}
+.linf h3{font-size:1.95rem;color:#fff;margin-bottom:4px;text-shadow:0 2px 14px rgba(0,0,0,.50)}
+.lrole{font-size:.83rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:17px;text-shadow:0 0 14px rgba(212,175,55,.30)}
+.lbio{font-size:.97rem;color:var(--t1);line-height:1.84;max-width:540px;margin-bottom:22px;text-shadow:0 1px 8px rgba(0,0,0,.40)}
+.lct{display:flex;gap:10px;flex-wrap:wrap}
+.lct a{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:var(--r-f);font-size:.80rem;font-weight:600;transition:var(--ease)}
+.lem{background:var(--ga);color:#fff;box-shadow:0 4px 14px rgba(233,69,96,.32)}
+.lem:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(233,69,96,.42)}
+.lso{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);color:var(--t2)}
+.lso:hover{background:rgba(255,255,255,.15);color:#fff;transform:translateY(-2px)}
+
+/* Team grid */
+.tmg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tm{padding:30px 18px;text-align:center;position:relative;overflow:hidden;transition:var(--ease)}
+.tm:hover{transform:translateY(-10px)}
+.tmph{
+  width:106px;height:106px;border-radius:50%;
+  margin:0 auto 16px;overflow:hidden;
+  border:3px solid rgba(255,255,255,.09);
+  transition:var(--ease);position:relative;z-index:1;
+}
+.tm:hover .tmph{border-color:var(--red);box-shadow:0 0 28px rgba(233,69,96,.24)}
+.tmph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tm:hover .tmph img{transform:scale(1.1)}
+.tm h3{font-size:.96rem;font-weight:700;color:#fff;margin-bottom:4px;font-family:'Inter',sans-serif;text-shadow:0 2px 10px rgba(0,0,0,.40)}
+.tmr{font-size:.68rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:11px}
+.tmb{font-size:.78rem;color:var(--t3);line-height:1.60;margin-bottom:15px}
+.tms{display:flex;justify-content:center;gap:7px;position:relative;z-index:1}
+.tms a{
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.09);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--t3);font-size:.78rem;transition:var(--ease);
+}
+.tms a:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-3px)}
+
+/* =====================================================
+   PAGE 5 — RESULTS & TESTIMONIALS  |  background1.jpg
+===================================================== */
+.statr{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:75px}
+.stc{padding:36px 20px;text-align:center;position:relative;overflow:hidden;transition:var(--ease)}
+.stc::before{
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:52px;height:4px;background:var(--ga);
+  border-radius:0 0 4px 4px;box-shadow:0 0 10px rgba(233,69,96,.32);
+}
+.stc:hover{transform:translateY(-8px)}
+.stci{width:50px;height:50px;border-radius:14px;background:rgba(233,69,96,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.15rem;color:#ff7088}
+.stbn{font-size:2.5rem;font-weight:800;font-family:'Playfair Display',serif;background:var(--ga);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;filter:drop-shadow(0 2px 8px rgba(233,69,96,.28))}
+.stds{font-size:.86rem;color:var(--t2);font-weight:500}
+
+.tsg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tc{padding:34px 26px;position:relative;transition:var(--ease)}
+.tc:hover{transform:translateY(-8px)}
+.tc .qm{position:absolute;top:16px;right:20px;font-size:3rem;color:rgba(233,69,96,.09);font-family:'Playfair Display',serif}
+.tc .stars{display:flex;gap:3px;margin-bottom:15px}
+.tc .stars i{color:var(--gold);font-size:.86rem;filter:drop-shadow(0 0 5px rgba(212,175,55,.40))}
+.tc .rv{font-size:.90rem;line-height:1.84;color:var(--t1);margin-bottom:20px;font-style:italic}
+.tcau{display:flex;align-items:center;gap:13px;padding-top:17px;border-top:1px solid rgba(255,255,255,.08)}
+.tcav{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.95rem}
+.tcnf h4{font-size:.90rem;font-family:'Inter',sans-serif;font-weight:700;color:#fff}
+.tcnf p{font-size:.76rem;color:var(--t3);margin-top:2px}
+
+/* =====================================================
+   PAGE 6 — ENGAGEMENT + FAQ + CTA  |  background2.jpg
+===================================================== */
+.eng{padding:118px 0}
+.engg{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.engc h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:17px;color:var(--t0);text-shadow:0 2px 14px rgba(0,0,0,.40)}
+.engc .ed{font-size:1rem;color:var(--t2);line-height:1.84;margin-bottom:30px}
+.fl{display:flex;flex-direction:column;gap:19px}
+.fi{display:flex;gap:14px;align-items:flex-start}
+.fick{width:29px;height:29px;min-width:29px;border-radius:50%;background:rgba(233,69,96,.14);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:.70rem;margin-top:3px}
+.fi h4{font-family:'Inter',sans-serif;font-size:.93rem;font-weight:700;margin-bottom:4px;color:#fff}
+.fi p{font-size:.86rem;color:var(--t2);line-height:1.64}
+.engv{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.ev{padding:24px 19px;text-align:center;transition:var(--ease)}
+.ev:nth-child(2){transform:translateY(21px)}
+.ev:nth-child(3){transform:translateY(-21px)}
+.ev:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+.ev:nth-child(2):hover{transform:translateY(16px)}
+.ev:nth-child(3):hover{transform:translateY(-26px)}
+.ev i{font-size:1.75rem;margin-bottom:11px;background:var(--ga);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 10px rgba(233,69,96,.28))}
+.ev h4{font-size:.88rem;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:5px;color:#fff}
+.ev p{font-size:.78rem;color:var(--t3)}
+
+/* FAQ */
+.faqsec{padding:118px 0}
+.fqwr{max-width:790px;margin:0 auto}
+.fq{margin-bottom:13px;overflow:hidden;transition:var(--ease)}
+.fqq{
+  padding:21px 25px;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  font-weight:600;font-size:.97rem;color:var(--t1);transition:var(--easef);
+}
+.fqq:hover{color:var(--red)}
+.fqtg{width:29px;height:29px;min-width:29px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;transition:var(--ease)}
+.fqtg i{font-size:.72rem;color:var(--red);transition:transform .3s}
+.fq.on .fqtg{background:var(--red)}
+.fq.on .fqtg i{color:#fff;transform:rotate(180deg)}
+.fqa{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1)}
+.fqai{padding:0 25px 21px}
+.fqai p{color:var(--t2);line-height:1.84;font-size:.91rem}
+.fq.on .fqa{max-height:280px}
+
+/* CTA */
+.cta{padding:118px 0;text-align:center;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(2rem,4.2vw,3.4rem);color:#fff;margin-bottom:17px;text-shadow:0 4px 24px rgba(0,0,0,.50)}
+.cta .cp{color:var(--t2);font-size:1.1rem;max-width:590px;margin:0 auto 38px;line-height:1.80;text-shadow:0 2px 10px rgba(0,0,0,.40)}
+.ctab{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+.nl{
+  padding:52px 0;
+  background:rgba(0,0,0,.34);
+  backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.nlin{display:flex;align-items:center;justify-content:space-between;gap:38px}
+.nlt h3{color:#fff;font-size:1.30rem;margin-bottom:5px}
+.nlt p{color:var(--t3);font-size:.86rem}
+.nlf{display:flex;gap:10px}
+.nlf input{
+  padding:13px 22px;border-radius:var(--r-f);
+  border:1px solid rgba(255,255,255,.11);
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  color:#fff;font-size:.91rem;width:305px;
+  outline:none;font-family:'Inter',sans-serif;transition:var(--ease);
+}
+.nlf input::placeholder{color:rgba(255,255,255,.22)}
+.nlf input:focus{border-color:var(--red);box-shadow:0 0 18px rgba(233,69,96,.15)}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer{
+  padding:75px 0 26px;
+  background:rgba(0,0,0,.42);
+  backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.ftm{display:grid;grid-template-columns:2fr 1fr 1fr 1.25fr;gap:46px;margin-bottom:46px}
+.ftbr h3{font-size:1.30rem;color:#fff;margin-bottom:13px;text-shadow:0 2px 10px rgba(0,0,0,.40)}
+.ftbr h3 span{color:var(--gold)}
+.ftbr p{color:var(--t3);line-height:1.80;font-size:.86rem;margin-bottom:20px}
+.ftsc{display:flex;gap:9px}
+.ftsc a{
+  width:38px;height:38px;border-radius:var(--r-sm);
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--t3);font-size:.88rem;transition:var(--ease);
+}
+.ftsc a:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-3px)}
+.ftc h4{color:#fff;font-size:.90rem;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:18px}
+.ftc li{margin-bottom:10px}
+.ftc a{color:var(--t3);font-size:.84rem;transition:var(--easef)}
+.ftc a:hover{color:var(--red);padding-left:4px}
+.ftci{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+.ftci i{color:var(--red);margin-top:3px;font-size:.82rem;flex-shrink:0}
+.ftci span,.ftci a{color:var(--t3);font-size:.80rem;line-height:1.40;word-break:break-all}
+.ftci a:hover{color:var(--red)}
+.ftbt{border-top:1px solid rgba(255,255,255,.05);padding-top:24px;display:flex;justify-content:space-between;align-items:center}
+.ftbt p{color:rgba(255,255,255,.20);font-size:.78rem}
+.ftbl{display:flex;gap:20px}
+.ftbl a{color:rgba(255,255,255,.20);font-size:.78rem;transition:var(--easef)}
+.ftbl a:hover{color:var(--red)}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+.btt{
+  position:fixed;bottom:26px;right:26px;width:46px;height:46px;
+  border-radius:50%;background:var(--ga);color:#fff;border:none;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;box-shadow:0 4px 18px rgba(233,69,96,.34);
+  z-index:900;opacity:0;visibility:hidden;
+  transform:translateY(18px);transition:var(--ease);
+}
+.btt.on{opacity:1;visibility:visible;transform:translateY(0)}
+.btt:hover{transform:translateY(-5px);box-shadow:0 8px 28px rgba(233,69,96,.46)}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media(max-width:1200px){
+  .tmg{grid-template-columns:repeat(3,1fr)}
+  .leader{gap:36px;padding:32px}
+}
+@media(max-width:1024px){
+  .hero .w{grid-template-columns:1fr;text-align:center}
+  .hct .sub{max-width:100%;margin:0 auto 38px}
+  .hbtns{justify-content:center}
+  .hsts{justify-content:center;flex-wrap:wrap;gap:26px}
+  .hvis{display:none}
+  .svcg{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);gap:38px}
+  .steps::before{display:none}
+  .statr{grid-template-columns:repeat(2,1fr)}
+  .tsg{grid-template-columns:repeat(2,1fr)}
+  .engg{grid-template-columns:1fr;gap:45px}
+  .ftm{grid-template-columns:1fr 1fr}
+  .leader{grid-template-columns:1fr;text-align:center}
+  .lph{margin:0 auto}
+  .lct{justify-content:center}
+  .lbdg{top:14px;right:14px}
+}
+@media(max-width:768px){
+  .sp,.eng,.faqsec,.cta{padding:78px 0}
+  .nl2{display:none}
+  .ham{display:flex}
+  .hct h1{font-size:2.1rem}
+  .hsts{gap:18px;padding:18px 20px}
+  .hsn{font-size:1.65rem}
+  .svcg,.tsg{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .tmg{grid-template-columns:repeat(2,1fr);gap:15px}
+  .tm{padding:20px 14px}
+  .tmph{width:82px;height:82px}
+  .leader{padding:26px 20px}
+  .lph{width:145px;height:145px}
+  .linf h3{font-size:1.40rem}
+  .statr{grid-template-columns:1fr 1fr;gap:13px}
+  .engv{grid-template-columns:1fr 1fr}
+  .ev:nth-child(2),.ev:nth-child(3){transform:none}
+  .ev:hover,.ev:nth-child(2):hover,.ev:nth-child(3):hover{transform:translateY(-5px)}
+  .nlin{flex-direction:column;text-align:center}
+  .nlf{flex-direction:column;width:100%}
+  .nlf input{width:100%}
+  .ftm{grid-template-columns:1fr;gap:28px}
+  .ftbt{flex-direction:column;gap:11px;text-align:center}
+  .ctab{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  .hct h1{font-size:1.85rem}
+  .hbtns{flex-direction:column;align-items:center}
+  .hbtns .btn{width:100%;max-width:275px}
+  .tmg{grid-template-columns:1fr;max-width:290px;margin:0 auto}
+  .statr{grid-template-columns:1fr;max-width:270px;margin:0 auto 65px}
+  .engv{grid-template-columns:1fr;max-width:255px;margin:0 auto}
+  .lph{width:118px;height:118px}
+  .linf h3{font-size:1.25rem}
+  .lct{flex-direction:column;align-items:center}
+}
+    </style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="pre" id="pre">
+    <div>
+        <div class="pre-logo">AUTHOR <span>VISIBILITY</span></div>
+        <div class="pbar"><div class="pfil"></div></div>
+    </div>
+</div>
+
+<!-- CURSOR -->
+<div class="cdot" id="cdot"></div>
+<div class="crng" id="crng"></div>
+
+<!-- ══════════════════════════════════
+     NAVBAR — fully transparent floating
+══════════════════════════════════ -->
+<nav class="nav" id="nav">
+    <div class="w">
+        <a href="#home" class="logo">
+            <div class="lic"><i class="fas fa-feather-alt"></i></div>
+            <div class="ltx">AUTHOR VISIBILITY<small>AGENCY</small></div>
+        </a>
+        <ul class="nl2">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#engagement">Engagement</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="ncta">Get Started</a></li>
+        </ul>
+        <div class="ham" id="ham"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mov" id="mov"></div>
+<div class="mmenu" id="mmenu">
+    <a href="#home" class="ml">Home</a>
+    <a href="#services" class="ml">Services</a>
+    <a href="#process" class="ml">Process</a>
+    <a href="#team" class="ml">Our Team</a>
+    <a href="#results" class="ml">Results</a>
+    <a href="#engagement" class="ml">Engagement</a>
+    <a href="#faq" class="ml">FAQ</a>
+    <a href="#contact" class="ml mcta">Get Started</a>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     PAGE 1 — HERO  |  background1.jpg  FULLY VISIBLE
+══════════════════════════════════════════════════ -->
+<section class="bg1 hero sp" id="home">
+    <div class="w">
+        <div class="hct">
+            <div class="bdg" data-aos="fade-down" data-aos-delay="300">
+                <span class="pdot"></span> #1 Rated Author Marketing Agency
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="500">
+                Make Your Book<br>
+                <span class="hl" id="typer">Impossible to Ignore</span>
+            </h1>
+            <p class="sub" data-aos="fade-up" data-aos-delay="700">
+                Led by <strong style="color:var(--gold)">Carine Levi</strong>, we help authors
+                amplify their brand, skyrocket book sales, and build a loyal reader community
+                that keeps coming back for more.
+            </p>
+            <div class="hbtns" data-aos="fade-up" data-aos-delay="900">
+                <a href="#contact" class="btn br">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+                <a href="#process" class="btn bgl"><i class="fas fa-play"></i> See How It Works</a>
+            </div>
+            <div class="hsts" data-aos="fade-up" data-aos-delay="1100">
+                <div class="hs">
+                    <div class="hsn" data-t="500" data-s="+">0</div>
+                    <div class="hsl">Authors Served</div>
+                </div>
+                <div class="hs">
+                    <div class="hsn" data-t="2" data-s="M+" data-d="1">0</div>
+                    <div class="hsl">Books Sold</div>
+                </div>
+                <div class="hs">
+                    <div class="hsn" data-t="98" data-s="%">0</div>
+                    <div class="hsl">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hvis" data-aos="fade-left" data-aos-delay="600">
+            <div class="bk">
+                <div class="bkc">
+                    <i class="fas fa-book-open"></i>
+                    <div class="bkt">Your Next<br>Bestseller</div>
+                    <div class="bka">Your Name Here</div>
+                </div>
+            </div>
+            <div class="fc fc1">
+                <div class="fci"><i class="fas fa-chart-line"></i></div>
+                <h4>Sales Up 340%</h4><p>Average client growth</p>
+            </div>
+            <div class="fc fc2">
+                <div class="fci"><i class="fas fa-users"></i></div>
+                <h4>50K+ Readers</h4><p>New audience reached</p>
+            </div>
+            <div class="fc fc3">
+                <div class="fci"><i class="fas fa-star"></i></div>
+                <h4>5-Star Rated</h4><p>By our authors</p>
+            </div>
+        </div>
+    </div>
+    <div class="sci">
+        <div class="smou"><div class="swh"></div></div>
+        <span>Scroll Down</span>
+    </div>
+</section>
+
+<!-- Marquee -->
+<div class="mqstrip">
+    <div class="w">
+        <div class="mqin">
+            <span class="mqlb">Trusted By</span>
+            <div class="mqwr">
+                <div class="mqtr">
+                    <span>📚 Amazon KDP</span><span>📖 Barnes & Noble</span>
+                    <span>✍️ Penguin Random House</span><span>📕 HarperCollins</span>
+                    <span>📗 Simon & Schuster</span><span>📘 Hachette Book Group</span>
+                    <span>📙 Macmillan Publishers</span><span>🏆 BookBub</span>
+                    <span>📚 IngramSpark</span>
+                    <span>📚 Amazon KDP</span><span>📖 Barnes & Noble</span>
+                    <span>✍️ Penguin Random House</span><span>📕 HarperCollins</span>
+                    <span>📗 Simon & Schuster</span><span>📘 Hachette Book Group</span>
+                    <span>📙 Macmillan Publishers</span><span>🏆 BookBub</span>
+                    <span>📚 IngramSpark</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     PAGE 2 — SERVICES  |  background2.jpg  FULLY VISIBLE
+══════════════════════════════════════════════════ -->
+<section class="bg2 sp" id="services">
+    <div class="w">
+        <div class="sh" data-aos="fade-up">
+            <span class="ov">What We Offer</span>
+            <h2>Complete Book Promotion Services</h2>
+            <div class="bar"></div>
+            <p class="ds">Full-spectrum author marketing and book promotion to maximise visibility, sales, and reader engagement worldwide.</p>
+        </div>
+        <div class="svcg">
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="80">
+                <div class="sico cr"><i class="fas fa-bullhorn"></i></div>
+                <h3>Book Launch Campaigns</h3>
+                <p>Strategic multi-channel launches generating buzz, pre-orders, and bestseller rankings from day one across every major retail platform.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="160">
+                <div class="sico cg"><i class="fas fa-pen-fancy"></i></div>
+                <h3>Author Branding & Identity</h3>
+                <p>Professional logos, author websites, social profiles, and media kits creating a cohesive, unforgettable visual identity for your brand.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="240">
+                <div class="sico cp"><i class="fas fa-share-alt"></i></div>
+                <h3>Social Media Marketing</h3>
+                <p>Targeted content strategies for BookTok, Bookstagram, Twitter/X, Facebook, and YouTube that grow engaged, loyal author followings.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="320">
+                <div class="sico cb"><i class="fas fa-envelope-open-text"></i></div>
+                <h3>Email Marketing & Funnels</h3>
+                <p>Automated welcome sequences, launch funnels, and newsletters that convert subscribers into loyal buyers and lifelong superfans.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="400">
+                <div class="sico cgr"><i class="fas fa-ad"></i></div>
+                <h3>Amazon & Paid Advertising</h3>
+                <p>ROI-focused Amazon Ads, Facebook, Instagram, and BookBub campaigns placing your books before the right readers at the perfect moment.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="480">
+                <div class="sico co"><i class="fas fa-users-cog"></i></div>
+                <h3>Reader Community Building</h3>
+                <p>Thriving reader communities through book clubs, ARC teams, street teams, fan groups, and exclusive reader loyalty reward programmes.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="560">
+                <div class="sico crs"><i class="fas fa-newspaper"></i></div>
+                <h3>PR & Media Outreach</h3>
+                <p>Book reviews, podcast interviews, magazine features, blog tours, and media coverage positioning you as the authority in your genre.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="640">
+                <div class="sico ct"><i class="fas fa-search"></i></div>
+                <h3>Book SEO & Metadata</h3>
+                <p>Optimised titles, descriptions, keywords, and categories for maximum discoverability on Amazon, Google, and all global retail platforms.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="720">
+                <div class="sico csk"><i class="fas fa-book-reader"></i></div>
+                <h3>Book Cover & Interior Design</h3>
+                <p>Eye-catching, genre-specific covers and professional interior formatting for print and digital editions that instantly attract readers.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="800">
+                <div class="sico ci"><i class="fas fa-video"></i></div>
+                <h3>Book Trailer Production</h3>
+                <p>Cinematic book trailers and promotional videos for YouTube, social media, and website embedding that captivate potential readers.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="880">
+                <div class="sico cy"><i class="fas fa-star-half-alt"></i></div>
+                <h3>Review Generation</h3>
+                <p>Systematic review campaigns on Amazon, Goodreads, and NetGalley building social proof and driving organic book discovery at scale.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <div class="svc gl" data-aos="fade-up" data-aos-delay="960">
+                <div class="sico cl"><i class="fas fa-globe"></i></div>
+                <h3>International Distribution</h3>
+                <p>Global book distribution strategy, worldwide retail partnerships, translation services, and marketing across international markets.</p>
+                <span class="slk">Learn More <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PAGE 3 — HOW IT WORKS  |  background3.jpg  FULLY VISIBLE
+══════════════════════════════════════════════════ -->
+<section class="bg3 sp" id="process">
+    <div class="w">
+        <div class="sh" data-aos="fade-up">
+            <span class="ov">Our Process</span>
+            <h2>How It Works</h2>
+            <div class="bar"></div>
+            <p class="ds">Our proven 4-step process takes you from invisible to irresistible in the publishing world.</p>
+        </div>
+        <div class="steps">
+            <div class="step" data-aos="fade-up" data-aos-delay="100">
+                <div class="stn">1</div>
+                <div class="gd" style="padding:28px 20px">
+                    <h3>Discovery Session</h3>
+                    <p>We learn about your goals, genre, audience, and vision for your author career in a deep personalised session.</p>
+                </div>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="240">
+                <div class="stn">2</div>
+                <div class="gd" style="padding:28px 20px">
+                    <h3>Custom Strategy</h3>
+                    <p>Our experts craft a personalised marketing roadmap designed for maximum visibility and reader engagement.</p>
+                </div>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="380">
+                <div class="stn">3</div>
+                <div class="gd" style="padding:28px 20px">
+                    <h3>Launch & Execute</h3>
+                    <p>We implement campaigns across all channels with precision, creativity, and data-driven optimisation.</p>
+                </div>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="520">
+                <div class="stn">4</div>
+                <div class="gd" style="padding:28px 20px">
+                    <h3>Scale & Grow</h3>
+                    <p>Analyse results, optimise performance, and continuously expand your reach to new readers worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PAGE 4 — TEAM  |  background2.jpg  FULLY VISIBLE
+══════════════════════════════════════════════════ -->
+<section class="bg2 sp" id="team">
+    <div class="w">
+        <div class="sh" data-aos="fade-up">
+            <span class="ov">Meet the Experts</span>
+            <h2>Our Leadership & Team</h2>
+            <div class="bar"></div>
+            <p class="ds">A dedicated team of publishing professionals led by our visionary founder, passionate about making your author dreams a reality.</p>
+        </div>
+
+        <!-- ★ CARINE LEVI — COMPANY LEADER ★ -->
+        <div class="leader gl" data-aos="fade-up" data-aos-delay="100">
+            <div class="lbdg"><i class="fas fa-crown"></i> Founder & Company Leader</div>
+            <div class="lph">
+                <img src="mr ridwan.png" alt="Carine Levi — Founder & CEO, Author Visibility Agency" loading="eager">
+            </div>
+            <div class="linf">
+                <h3>CARINE LEVI</h3>
+                <div class="lrole">Founder & Chief Executive Officer</div>
+                <p class="lbio">With over a decade of experience in publishing and author marketing, Carine Levi founded Author Visibility Agency with a singular mission: to ensure every talented author finds their audience. Her visionary leadership, deep understanding of reader psychology, and innovative marketing strategies have helped 500+ authors achieve bestseller status and build thriving reader communities worldwide.</p>
+                <div class="lct">
+                    <a href="mailto:carine@authorvisibilityagency.com" class="lem">
+                        <i class="fas fa-envelope"></i> carine@authorvisibilityagency.com
+                    </a>
+                    <a href="#" class="lso"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="lso"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="lso"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TEAM GRID -->
+        <div class="tmg">
+
+            <!-- EVELYN HADERSON -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="100">
+                <div class="tmph"><img src="374767.jpg" alt="Evelyn Haderson" loading="lazy"></div>
+                <h3>EVELYN HADERSON</h3>
+                <div class="tmr">Marketing Director</div>
+                <p class="tmb">Expert in multi-channel author campaigns & bestseller launch strategies.</p>
+                <div class="tms">
+                    <a href="mailto:evelynanderson483@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- DAVIS LISA -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="180">
+                <div class="tmph"><img src="374768.JPG" alt="Davis Lisa" loading="lazy"></div>
+                <h3>DAVIS LISA</h3>
+                <div class="tmr">Brand Strategist</div>
+                <p class="tmb">Creates stunning author brands & visual identities that captivate readers.</p>
+                <div class="tms">
+                    <a href="mailto:davislisaa444@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- LORRIAN GROSS -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="260">
+                <div class="tmph"><img src="Lorraine Gross.png" alt="Lorrian Gross" loading="lazy"></div>
+                <h3>LORRIAN GROSS</h3>
+                <div class="tmr">Community Manager</div>
+                <p class="tmb">Builds engaged reader communities & manages ARC teams for maximum impact.</p>
+                <div class="tms">
+                    <a href="mailto:grosslorraine5@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- ROBIN CANDILLO -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="340">
+                <div class="tmph"><img src="robin.png" alt="Robin Candillo" loading="lazy"></div>
+                <h3>ROBIN CANDILLO</h3>
+                <div class="tmr">Digital Advertising Lead</div>
+                <p class="tmb">Drives ROI-focused paid ad campaigns across Amazon, Facebook & BookBub.</p>
+                <div class="tms">
+                    <a href="mailto:robincandillo@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- ELIZABETH PHILIP -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="420">
+                <div class="tmph"><img src="unnamed (6).jpg" alt="Elizabeth Philip" loading="lazy"></div>
+                <h3>ELIZABETH PHILIP</h3>
+                <div class="tmr">Content Specialist</div>
+                <p class="tmb">Crafts compelling content & social strategies driving deep reader engagement.</p>
+                <div class="tms">
+                    <a href="mailto:elizabethphili012@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- AMANDA OCONNELL -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="500">
+                <div class="tmph"><img src="rrfg.png" alt="Amanda Oconnell" loading="lazy"></div>
+                <h3>AMANDA OCONNELL</h3>
+                <div class="tmr">PR & Outreach Manager</div>
+                <p class="tmb">Secures media coverage, podcast features & partnerships for author visibility.</p>
+                <div class="tms">
+                    <a href="mailto:amandaoconnell825@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- FLORA THOMSEN -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="580">
+                <div class="tmph"><img src="ji.jpeg" alt="Flora Thomsen" loading="lazy"></div>
+                <h3>FLORA THOMSEN</h3>
+                <div class="tmr">Email Marketing Specialist</div>
+                <p class="tmb">Designs high-converting email sequences and author newsletter campaigns.</p>
+                <div class="tms">
+                    <a href="mailto:florathomsen3@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- CLARA BENNETT -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="660">
+                <div class="tmph"><img src="mem.jpg" alt="Clara Bennett" loading="lazy"></div>
+                <h3>CLARA BENNETT</h3>
+                <div class="tmr">SEO & Metadata Strategist</div>
+                <p class="tmb">Optimises book discoverability across Amazon, Google & global retail platforms.</p>
+                <div class="tms">
+                    <a href="mailto:clarabennett109@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- VIVIAN MORRIS -->
+            <div class="tm gl" data-aos="fade-up" data-aos-delay="740">
+                <div class="tmph"><img src="vivian.jpg" alt="Vivian Morris" loading="lazy"></div>
+                <h3>VIVIAN MORRIS</h3>
+                <div class="tmr">Creative Director</div>
+                <p class="tmb">Leads book cover design, trailers & visual branding that captivate readers instantly.</p>
+                <div class="tms">
+                    <a href="mailto:vivianmorris878@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div><!-- end tmg -->
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PAGE 5 — RESULTS & TESTIMONIALS  |  background1.jpg  FULLY VISIBLE
+══════════════════════════════════════════════════ -->
+<section class="bg1 sp" id="results">
+    <div class="w">
+        <div class="sh" data-aos="fade-up">
+            <span class="ov">Proven Track Record</span>
+            <h2>Results That Speak</h2>
+            <div class="bar"></div>
+            <p class="ds">Our numbers tell the story of hundreds of authors who trusted Carine Levi and our team with their dreams.</p>
+        </div>
+
+        <div class="statr">
+            <div class="stc gd" data-aos="fade-up" data-aos-delay="100">
+                <div class="stci"><i class="fas fa-feather-alt"></i></div>
+                <div class="stbn" data-t="500" data-s="+">0</div>
+                <div class="stds">Authors Empowered</div>
+            </div>
+            <div class="stc gd" data-aos="fade-up" data-aos-delay="200">
+                <div class="stci"><i class="fas fa-book"></i></div>
+                <div class="stbn" data-t="2" data-s="M+" data-d="1">0</div>
+                <div class="stds">Books Sold</div>
+            </div>
+            <div class="stc gd" data-aos="fade-up" data-aos-delay="300">
+                <div class="stci"><i class="fas fa-chart-line"></i></div>
+                <div class="stbn" data-t="340" data-s="%">0</div>
+                <div class="stds">Avg. Sales Increase</div>
+            </div>
+            <div class="stc gd" data-aos="fade-up" data-aos-delay="400">
+                <div class="stci"><i class="fas fa-trophy"></i></div>
+                <div class="stbn" data-t="50" data-s="+">0</div>
+                <div class="stds">Bestseller Campaigns</div>
+            </div>
+        </div>
+
+        <div class="sh" data-aos="fade-up" style="margin-top:10px">
+            <span class="ov">Client Love</span>
+            <h2>What Authors Say</h2>
+            <div class="bar"></div>
+        </div>
+
+        <div class="tsg">
+            <div class="tc gd" data-aos="fade-up" data-aos-delay="100">
+                <div class="qm">"</div>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="rv">"Carine and her team took my self-published novel from 10 sales a month to over 2,000. They completely transformed my career. Best investment I ever made."</p>
+                <div class="tcau">
+                    <div class="tcav" style="background:var(--ga)">SK</div>
+                    <div class="tcnf"><h4>Sarah K. Mitchell</h4><p>Romance Author, 12 Books Published</p></div>
+                </div>
+            </div>
+            <div class="tc gd" data-aos="fade-up" data-aos-delay="240">
+                <div class="qm">"</div>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="rv">"The reader engagement strategies built a community of 15,000 passionate fans. My launch days are now events readers look forward to for months."</p>
+                <div class="tcau">
+                    <div class="tcav" style="background:var(--gp)">JR</div>
+                    <div class="tcnf"><h4>James R. Thornton</h4><p>Thriller Author, NYT Bestseller</p></div>
+                </div>
+            </div>
+            <div class="tc gd" data-aos="fade-up" data-aos-delay="380">
+                <div class="qm">"</div>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="rv">"As a debut author, I had no idea how to market my book. Carine's team gave me a complete roadmap — I hit #1 in my category on launch day. Absolutely incredible!"</p>
+                <div class="tcau">
+                    <div class="tcav" style="background:var(--gg)">ML</div>
+                    <div class="tcnf"><h4>Maria L. Chen</h4><p>Fantasy Author, Debut Bestseller</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PAGE 6 — ENGAGEMENT + FAQ + CTA  |  background2.jpg  FULLY VISIBLE
+══════════════════════════════════════════════════ -->
+<section class="bg2 eng" id="engagement">
+    <div class="w">
+        <div class="engg">
+            <div class="engc" data-aos="fade-right">
+                <span class="ov" style="color:var(--gold)">Reader Engagement</span>
+                <h2 style="margin-top:10px">Build a Reader Community That <span style="color:var(--red)">Loves</span> You</h2>
+                <p class="ed">We don't just sell books — we create lasting connections between you and your readers that drive word-of-mouth and lifelong fandom.</p>
+                <div class="fl">
+                    <div class="fi">
+                        <div class="fick"><i class="fas fa-check"></i></div>
+                        <div><h4>Interactive Author Websites</h4><p>Immersive sites with character maps, bonus content, and reader forums.</p></div>
+                    </div>
+                    <div class="fi">
+                        <div class="fick"><i class="fas fa-check"></i></div>
+                        <div><h4>ARC & Street Team Management</h4><p>We recruit and manage your advance reader & promotional teams.</p></div>
+                    </div>
+                    <div class="fi">
+                        <div class="fick"><i class="fas fa-check"></i></div>
+                        <div><h4>Live Virtual Events</h4><p>Book readings, Q&As, and virtual launch parties that thrill fans.</p></div>
+                    </div>
+                    <div class="fi">
+                        <div class="fick"><i class="fas fa-check"></i></div>
+                        <div><h4>Exclusive Reader Rewards</h4><p>Loyalty programmes with signed copies, bonus chapters, and early access.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="engv" data-aos="fade-left">
+                <div class="ev gl"><i class="fas fa-book-reader"></i><h4>Book Clubs</h4><p>Curated reading groups</p></div>
+                <div class="ev gl"><i class="fas fa-podcast"></i><h4>Author Podcasts</h4><p>Behind-the-scenes stories</p></div>
+                <div class="ev gl"><i class="fas fa-comments"></i><h4>Reader Forums</h4><p>Active fan communities</p></div>
+                <div class="ev gl"><i class="fas fa-gift"></i><h4>Giveaways</h4><p>Viral contests & prizes</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg3 faqsec" id="faq">
+    <div class="w">
+        <div class="sh" data-aos="fade-up">
+            <span class="ov">Got Questions?</span>
+            <h2>Frequently Asked Questions</h2>
+            <div class="bar"></div>
+            <p class="ds">Everything you need to know before getting started with us.</p>
+        </div>
+        <div class="fqwr">
+            <div class="fq gd on" data-aos="fade-up" data-aos-delay="80">
+                <div class="fqq">What genres do you work with?<div class="fqtg"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="fqa"><div class="fqai"><p>We work with all genres — romance, thriller, fantasy, sci-fi, non-fiction, memoir, self-help, children's books, and more. Our strategies are fully customised to your specific genre and target reader demographic.</p></div></div>
+            </div>
+            <div class="fq gd" data-aos="fade-up" data-aos-delay="140">
+                <div class="fqq">How soon will I see results?<div class="fqtg"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="fqa"><div class="fqai"><p>Most authors see measurable results within 30-60 days. Social media growth and email list building start almost immediately, while book sales typically improve significantly within 60-90 days of campaign launch.</p></div></div>
+            </div>
+            <div class="fq gd" data-aos="fade-up" data-aos-delay="200">
+                <div class="fqq">Do you work with self-published and traditionally published authors?<div class="fqtg"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="fqa"><div class="fqai"><p>Absolutely! We work with both self-published and traditionally published authors. Whether you're indie or with a major publisher, our strategies are tailored to maximise your visibility and sales.</p></div></div>
+            </div>
+            <div class="fq gd" data-aos="fade-up" data-aos-delay="260">
+                <div class="fqq">What makes Author Visibility Agency different?<div class="fqtg"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="fqa"><div class="fqai"><p>Led by Carine Levi, we're authors and readers ourselves. We combine data-driven strategies with genuine passion for books and storytelling, understanding the publishing industry from the inside out.</p></div></div>
+            </div>
+            <div class="fq gd" data-aos="fade-up" data-aos-delay="320">
+                <div class="fqq">How do I get started?<div class="fqtg"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="fqa"><div class="fqai"><p>Simply email us at carine@authorvisibilityagency.com. We'll review your author platform, discuss your goals, and outline a personalised growth plan — free with absolutely no obligation.</p></div></div>
+            </div>
+            <div class="fq gd" data-aos="fade-up" data-aos-delay="380">
+                <div class="fqq">What book promotion services are included?<div class="fqtg"><i class="fas fa-chevron-down"></i></div></div>
+                <div class="fqa"><div class="fqai"><p>We offer full-spectrum promotion: book launches, author branding, social media, email marketing, paid advertising, community building, PR & media outreach, book SEO & metadata, cover design, book trailers, review generation, and international distribution.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg2 cta" id="contact">
+    <div class="w">
+        <h2 data-aos="fade-up">Ready to Become<br>Unforgettable?</h2>
+        <p class="cp" data-aos="fade-up" data-aos-delay="180">Join 500+ authors who've transformed their careers with Carine Levi and Author Visibility Agency. Reach out today and let's make your book the next big thing.</p>
+        <div class="ctab" data-aos="fade-up" data-aos-delay="360">
+            <a href="mailto:carine@authorvisibilityagency.com" class="btn br"><i class="fas fa-envelope"></i> Email Carine Levi</a>
+            <a href="mailto:evelynanderson483@gmail.com" class="btn bg"><i class="fas fa-paper-plane"></i> Contact Our Team</a>
+            <a href="#team" class="btn bgl"><i class="fas fa-users"></i> Meet Our Team</a>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<div class="nl">
+    <div class="w">
+        <div class="nlin">
+            <div class="nlt">
+                <h3>📬 Get Author Marketing Tips Weekly</h3>
+                <p>Expert insights from Carine Levi's team delivered straight to your inbox.</p>
+            </div>
+            <form class="nlf" id="nlf">
+                <input type="email" id="nle" placeholder="Enter your email address" required aria-label="Email address">
+                <button type="submit" class="btn br">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="w">
+        <div class="ftm">
+            <div class="ftbr">
+                <h3>Author <span>Visibility</span> Agency</h3>
+                <p>Founded by Carine Levi, we help every talented author find their audience. Your story deserves to be heard — let us amplify it to the world.</p>
+                <div class="ftsc">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="ftc">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Book Launches</a></li>
+                    <li><a href="#services">Author Branding</a></li>
+                    <li><a href="#services">Social Media</a></li>
+                    <li><a href="#services">Email Marketing</a></li>
+                    <li><a href="#services">Paid Advertising</a></li>
+                    <li><a href="#services">PR & Outreach</a></li>
+                    <li><a href="#services">Book SEO</a></li>
+                    <li><a href="#services">Cover Design</a></li>
+                    <li><a href="#services">Book Trailers</a></li>
+                    <li><a href="#services">Review Generation</a></li>
+                </ul>
+            </div>
+            <div class="ftc">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#home">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#engagement">Engagement</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="ftc">
+                <h4>Contact Team</h4>
+                <div class="ftci"><i class="fas fa-crown"></i><span><strong style="color:rgba(255,255,255,.68)">Carine Levi (CEO)</strong><br><a href="mailto:carine@authorvisibilityagency.com">carine@authorvisibilityagency.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:evelynanderson483@gmail.com">evelynanderson483@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:davislisaa444@gmail.com">davislisaa444@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:grosslorraine5@gmail.com">grosslorraine5@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:robincandillo@gmail.com">robincandillo@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:elizabethphili012@gmail.com">elizabethphili012@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:amandaoconnell825@gmail.com">amandaoconnell825@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:florathomsen3@gmail.com">florathomsen3@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:clarabennett109@gmail.com">clarabennett109@gmail.com</a></span></div>
+                <div class="ftci"><i class="fas fa-envelope"></i><span><a href="mailto:vivianmorris878@gmail.com">vivianmorris878@gmail.com</a></span></div>
+            </div>
+        </div>
+        <div class="ftbt">
+            <p>&copy; 2024 Author Visibility Agency. Founded by Carine Levi. All rights reserved.</p>
+            <div class="ftbl">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button class="btt" id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ══════════════════════════════════
+     SCRIPTS
+══════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+(function(){
+'use strict';
+
+/* ── Preloader ── */
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    document.getElementById('pre').classList.add('off');
+  },2200);
+});
+
+/* ── AOS ── */
+AOS.init({
+  duration:780,easing:'ease-out-cubic',
+  once:true,offset:75,
+  disable:function(){return window.innerWidth<768;}
+});
+
+/* ── Custom Cursor ── */
+var cdot=document.getElementById('cdot'),crng=document.getElementById('crng');
+if(window.innerWidth>1024){
+  document.addEventListener('mousemove',function(e){
+    cdot.style.left=e.clientX+'px';
+    cdot.style.top=e.clientY+'px';
+    crng.style.left=e.clientX+'px';
+    crng.style.top=e.clientY+'px';
+  });
+  var hels=document.querySelectorAll('a,button,.svc,.tm,.fqq,.ev,.stc,.tc,.leader');
+  hels.forEach(function(el){
+    el.addEventListener('mouseenter',function(){crng.classList.add('hv');});
+    el.addEventListener('mouseleave',function(){crng.classList.remove('hv');});
+  });
+}
+
+/* ── Navbar ── */
+var nav=document.getElementById('nav'),btt=document.getElementById('btt');
+window.addEventListener('scroll',function(){
+  nav.classList.toggle('stk',window.scrollY>75);
+  btt.classList.toggle('on',window.scrollY>500);
+},{passive:true});
+btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+/* ── Mobile Menu ── */
+var ham=document.getElementById('ham'),
+    mm=document.getElementById('mmenu'),
+    mov=document.getElementById('mov');
+
+function openM(){ham.classList.add('on');mm.classList.add('on');mov.classList.add('on');document.body.style.overflow='hidden';}
+function closeM(){ham.classList.remove('on');mm.classList.remove('on');mov.classList.remove('on');document.body.style.overflow='';}
+
+ham.addEventListener('click',function(){mm.classList.contains('on')?closeM():openM();});
+mov.addEventListener('click',closeM);
+document.querySelectorAll('.ml').forEach(function(l){l.addEventListener('click',closeM);});
+
+/* ── FAQ Accordion ── */
+document.querySelectorAll('.fq').forEach(function(item){
+  item.querySelector('.fqq').addEventListener('click',function(){
+    var isOn=item.classList.contains('on');
+    document.querySelectorAll('.fq').forEach(function(f){f.classList.remove('on');});
+    if(!isOn) item.classList.add('on');
+  });
+});
+
+/* ── Counter Animation ── */
+function animNum(el){
+  var tgt=parseFloat(el.getAttribute('data-t')),
+      suf=el.getAttribute('data-s')||'',
+      dec=parseInt(el.getAttribute('data-d')||'0'),
+      dur=2500,st=null;
+  function tick(ts){
+    if(!st) st=ts;
+    var p=Math.min((ts-st)/dur,1),e=1-Math.pow(1-p,4);
+    var val=e*tgt;
+    el.textContent=(dec>0?val.toFixed(dec):Math.floor(val))+suf;
+    if(p<1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+var cEls=document.querySelectorAll('.hsn,.stbn');
+var cObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){animNum(e.target);cObs.unobserve(e.target);}
+  });
+},{threshold:0.5});
+cEls.forEach(function(c){cObs.observe(c);});
+
+/* ── Typing Effect ── */
+var phrases=['Impossible to Ignore','A Bestseller','Reader Obsessed','Unforgettable','Globally Visible','A Literary Brand'];
+var pi=0,ci=0,del=false;
+var tel=document.getElementById('typer');
+
+function typeLoop(){
+  var ph=phrases[pi];
+  if(del){tel.textContent=ph.substring(0,--ci);}
+  else{tel.textContent=ph.substring(0,++ci);}
+  var dl=del?34:74;
+  if(!del&&ci===ph.length){dl=2400;del=true;}
+  else if(del&&ci===0){del=false;pi=(pi+1)%phrases.length;dl=380;}
+  setTimeout(typeLoop,dl);
+}
+setTimeout(typeLoop,2500);
+
+/* ── Newsletter Form ── */
+document.getElementById('nlf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var b=this.querySelector('.btn'),
+      inp=document.getElementById('nle'),
+      orig=b.innerHTML;
+  b.innerHTML='<i class="fas fa-check"></i> Subscribed!';
+  b.style.background='linear-gradient(135deg,#2ed573,#7bed9f)';
+  b.style.boxShadow='0 4px 18px rgba(46,213,115,.38)';
+  setTimeout(function(){
+    b.innerHTML=orig;
+    b.style.background='';
+    b.style.boxShadow='';
+    inp.value='';
+  },3500);
+});
+
+/* ── Smooth Scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h==='#') return;
+    e.preventDefault();
+    var t=document.querySelector(h);
+    if(t) window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-78,behavior:'smooth'});
+  });
+});
+
+/* ── Active Nav Link ── */
+var secs=document.querySelectorAll('section[id]');
+var nAs=document.querySelectorAll('.nl2 a:not(.ncta)');
+window.addEventListener('scroll',function(){
+  var sp=window.scrollY+150;
+  secs.forEach(function(s){
+    var id=s.getAttribute('id'),top=s.offsetTop,h=s.offsetHeight;
+    if(sp>=top&&sp<top+h){
+      nAs.forEach(function(a){
+        a.style.color='';
+        if(a.getAttribute('href')==='#'+id) a.style.color='var(--gold)';
+      });
+    }
+  });
+},{passive:true});
+
+})();
+</script>
+</body>
+</html>
